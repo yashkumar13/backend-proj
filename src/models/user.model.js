@@ -1,6 +1,7 @@
-import mongoose from "mongoose";
+import mongoose, {Schema} from "mongoose";
 import jwt from "jsonwebtoken"
 import bcrypt from "bcrypt"
+
 
 const userSchema = new mongoose.Schema({
     
@@ -29,7 +30,7 @@ const userSchema = new mongoose.Schema({
         required : true,
 
     },
-    CoverImage: {
+    coverImage: {
         type: String,
 
     },
