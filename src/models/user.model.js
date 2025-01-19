@@ -50,6 +50,7 @@ const userSchema = new mongoose.Schema({
 
 }, {timestamps: true}) 
 
+//kuch bhi save karenge to usse pahle ye run hoga
 userSchema.pre("save", async function (next) {
     if(!this.isModified("password")) return next();
 
